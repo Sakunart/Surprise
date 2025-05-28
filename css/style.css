@@ -1,0 +1,1334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+:root {
+    --green:#008000;
+    --teal:	#10de28;
+}
+
+*{
+    font-family: "Inter", sans-serif;
+    margin:0;padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--green);
+    color: #fff;
+}
+html {
+    font-size: 50.5%;
+    overflow-x: hidden; /* Prevents horizontal scroll but allows vertical scroll */
+    overflow-y: auto; /* Enables vertical scrolling */
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 2rem 9%;
+}
+.heading {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.heading span{
+    font-size: 2rem;
+    color: #181717;
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:1rem;
+    background: var(--green);
+    color: #fff;
+    padding:.8rem 3rem;
+    border:.2rem solid var(--green);
+    cursor:pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: rgba(15, 15, 15, 0.2);
+    color: var(--green);
+}
+header{
+    position: fixed;
+    top:0;left: 0;right: 0;
+    background: #000000;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+header .logo span{
+    color: var(--green);
+}
+header .navbar a{
+    color: #fff;
+    font-size: 2rem;
+    margin:0 .8rem;
+}
+header .navbar a:hover{
+    color:var(--green);
+}
+header .icons i{
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+header .icons i:hover{
+    color:var(--green);
+}
+header .search-bar-container{
+    position: absolute;
+    top: 100%;left: 0;right: 0;
+    padding:1.5rem 2rem;
+    background: #333;
+    border-top: .1rem solid rgba(255, 255, 255,.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path:polygon(0 0, 100% 0, 100% 0, 0 0) ;
+}
+header .search-bar-container.active{
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%) ;
+}
+header .search-bar-container #search-bar{
+    width: 100%;
+    padding:1rem;
+    text-transform:none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+header .search-bar-container label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+header .search-bar-container label:hover{
+    color: var(--green);
+}
+.login-form-container{
+    position:fixed;
+    top: -120%;left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background:rgba(0,0,0,.7);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.login-form-container.active{
+    top:0;
+}
+.login-form-container form{
+    margin:2rem;
+    padding:1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;
+}
+.login-form-container form h3{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding:1rem 0;
+}
+.login-form-container form .box{
+    width: 100%;
+    padding:1rem;
+    font-size:1.7rem;
+    color: #333;
+    margin:.6rem 0;
+    border:.1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+.login-form-container form .box:focus{
+    border-color: var(--green);
+}
+.login-form-container form #remember{
+    margin:2rem 0;
+}
+.login-form-container form label{
+    font-size:1.5rem;
+}
+.login-form-container form .btn{
+    display: block;
+    width: 100%;
+}
+.login-form-container form p{
+    padding:.5rem 0;
+    font-size:1.5rem;
+    color: #666;
+}
+.login-form-container form p a{
+    color: var(--green);
+}
+.login-form-container form p a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+.login-form-container #form-close{
+    position: absolute;
+    top: 2rem;right:3rem;
+    font-size: 5rem;
+    color:#fff;
+    cursor: pointer;
+}
+
+#menu-bar{
+    color: #fff;
+    border: .1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index:0 ;
+}
+
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow:1.2 rgba(0,0,0,.1) ;
+
+}
+.home .content p{
+    font-size: 2rem;
+    color: #fff;
+    padding: 1.4;
+
+}
+.home .video-container video{
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.home .controls{
+    padding:1rem;
+    border-radius: 5rem;
+    position: relative;
+    top: 15rem;
+}
+.home .controls .vid-btn{
+    height:1.5rem;
+    width:1.5rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #181717;
+    cursor: pointer;
+    margin:0 .5rem ;
+}
+.home .controls .vid-btn.active{
+    background:#fff ;
+}
+.planvisit .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.planvisit .row .image{
+    flex: 1 1 40rem;
+}
+.planvisit .row .image img{
+    width: 100%;
+}
+.planvisit .row form{
+    flex: 1 1 40rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+.planvisit .row form .inputBox{
+    padding: .5rem 0;
+}
+.planvisit .row form .inputBox input{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+.planvisit .row form .inputBox h3{
+   font-size: 2rem;
+   padding: 1rem 0; 
+   color: #666;
+}
+.destinations {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 5rem 9%;
+}
+
+.destinations .heading {
+    margin-bottom: 2rem;
+}
+
+.destinations .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 2rem; /* Space between columns */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Individual destination box */
+.destinations .box {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.destinations .box:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Image and Map Container */
+.destinations .box .image-map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.destinations .box img,
+.destinations .box iframe {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Review Section */
+.review {
+    padding: 5rem 9%;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Ensures all cards are equal in height */
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Maintain Equal Height for Content */
+.review-card .review-text {
+    flex-grow: 1; /* Makes text fill available space */
+    font-size: 1.6rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--green);
+}
+
+.user-details h3 {
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.user-details p {
+    font-size: 1.4rem;
+    color: #777;
+}
+
+/* Star Rating */
+.rating {
+    font-size: 2rem;
+    color: #FFD700;
+    text-align: center;
+    margin-top: auto; /* Ensures stars are always at the bottom */
+}
+
+/* Review Buttons Container */
+.review-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Load More Button */
+#load-more-reviews {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    background: var(--green);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#load-more-reviews:hover {
+    background: #0a8a0a;
+}
+
+/* Add Review Form Container */
+.add-review-container {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-review-container.active {
+    top: 0;
+}
+
+.add-review-container form {
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;
+}
+
+.add-review-container form h3 {
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.add-review-container form .box {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+
+.add-review-container form textarea.box {
+    height: 15rem;
+    resize: none;
+}
+
+.add-review-container form .box:focus {
+    border-color: var(--green);
+}
+
+.add-review-container #review-form-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Rating Select */
+.rating-select {
+    margin: 1rem 0;
+}
+
+.rating-select p {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 2.5rem;
+    color: #ccc;
+}
+
+.star-rating i {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating i:hover,
+.star-rating i.fas {
+    color: #FFD700;
+}
+
+/* Profile Section */
+.profile {
+    padding: 5rem 9%;
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+.profile-container {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.user-profile {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.user-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--green);
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.user-profile h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.user-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.stat-label {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.profile-menu {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile-menu ul {
+    list-style: none;
+}
+
+.profile-menu li {
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.profile-menu li:last-child {
+    border-bottom: none;
+}
+
+.profile-menu li:hover {
+    background: #f5f5f5;
+    color: var(--green);
+}
+
+.profile-menu li.active {
+    background: var(--green);
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Profile Content */
+.profile-content {
+    flex: 1;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Trip Cards */
+.trip-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.trip-card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+}
+
+.trip-header {
+    position: relative;
+    height: 150px;
+}
+
+.trip-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trip-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.trip-status.upcoming {
+    background: var(--green);
+    color: #fff;
+}
+
+.trip-status.completed {
+    background: #3498db;
+    color: #fff;
+}
+
+.trip-details {
+    padding: 1.5rem;
+}
+
+.trip-details h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.trip-info {
+    margin-bottom: 1.5rem;
+}
+
+.trip-info p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.trip-info p i {
+    margin-right: 0.5rem;
+    color: var(--green);
+}
+
+.trip-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Saved Destinations */
+.saved-destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.saved-destination-card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.saved-destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.saved-destination-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.saved-destination-info {
+    padding: 1.5rem;
+}
+
+.saved-destination-info h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.saved-destination-info p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.saved-destination-info p i {
+    margin-right: 0.5rem;
+    color: var(--green);
+}
+
+.saved-destination-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Small Buttons */
+.btn-small {
+    padding: 0.7rem 1.2rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-trip, .add-review, .plan-now {
+    background: var(--green);
+    color: #fff;
+    border: 1px solid var(--green);
+}
+
+.cancel-trip, .remove-saved {
+    background: #fff;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.book-again {
+    background: #fff;
+    color: #3498db;
+    border: 1px solid #3498db;
+}
+
+.btn-small:hover {
+    transform: translateY(-3px);
+}
+
+/* Empty State Messages */
+.no-trips-message, .no-saved-message {
+    text-align: center;
+    padding: 3rem;
+}
+
+.no-trips-message i, .no-saved-message i {
+    font-size: 5rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.no-trips-message p, .no-saved-message p {
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.form-group .box {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.form-group textarea.box {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+/* Edit Profile Modal */
+.edit-profile-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-profile-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    padding: 3rem;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.profile-picture-upload {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-picture-upload img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--green);
+    color: #fff;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.upload-btn i {
+    margin-right: 0.5rem;
+}
+
+.about {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 9%;
+}
+
+.about .content {
+    max-width: 800px;
+}
+
+.about h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.8rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about .image {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    font-size: 1.6rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .destinations .box-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+    
+    .profile-container {
+        flex-direction: column;
+    }
+    
+    .profile-sidebar {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+    
+    #menu-bar {
+        display: block;
+    }
+    
+    header .navbar {
+        position: absolute;
+        top: 100%; right: 0; left: 0;
+        background: #333;
+        border-top: .1rem solid rgba(255,255,255,.2);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    header .navbar a {
+        display: block;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: #222;
+    }
+    
+    .destinations .box-container {
+        grid-template-columns: repeat(1, 1fr); /* One column for mobile */
+    }
+    
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        max-width: 100%;
+        min-height: auto;
+    }
+    
+    .review-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .add-review-container form {
+        width: 90%;
+    }
+    
+    .trip-cards, .saved-destinations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-profile img {
+        width: 100px;
+        height: 100px;
+    }
+}
+/* About Us Section Styling */
+.about {
+    padding: 5rem 9%;
+    background: #f9f9f9;
+}
+
+.about .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1 1 60rem;
+}
+
+.about-text h3 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.about-image {
+    flex: 1 1 30rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.highlight-item {
+    flex: 1 1 18rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-item i {
+    font-size: 3.5rem;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+}
+
+.highlight-item h4 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.highlight-item p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.contact-info {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--green);
+}
+
+.contact-item p {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #0a8a0a;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .about .content {
+        flex-direction: column;
+    }
+    
+    .highlights {
+        flex-direction: column;
+    }
+    
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+/* Highlight effect for input when filled automatically */
+@keyframes highlightInput {
+    0% { background-color: #ffffff; }
+    50% { background-color: rgba(0, 128, 0, 0.2); }
+    100% { background-color: #ffffff; }
+}
+
+.highlight-input {
+    animation: highlightInput 1.5s ease;
+}
+
+/* Editing highlight for plan visit form */
+@keyframes editingFormHighlight {
+    0% { box-shadow: 0 1rem 2rem rgba(0,0,0,.1); }
+    50% { box-shadow: 0 1rem 2rem rgba(0,128,0,.3); }
+    100% { box-shadow: 0 1rem 2rem rgba(0,0,0,.1); }
+}
+
+.editing-form {
+    animation: editingFormHighlight 1.5s ease;
+}
+
+/* Trip Details Modal */
+.trip-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.trip-details-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.trip-details-modal .modal-content {
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.trip-details-modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.trip-details-modal .close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.trip-details-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.trip-details-content img {
+    width: 40%;
+    min-width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.trip-details-content .trip-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.trip-details-content h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--green);
+}
+
+.trip-details-content p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .trip-details-content {
+        flex-direction: column;
+    }
+    
+    .trip-details-content img {
+        width: 100%;
+    }
+}

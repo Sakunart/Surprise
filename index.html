@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width,initial-scale=1.0">
+        <title>Currimao Escape</title>
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <!--connect css file -->
+        <link rel = "stylesheet" href="css/style.css">
+
+</head>
+<body>
+        <!-- header start-->
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            
+            <a href="#" class="logo"><span>C</span>escape</a>
+        
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#planvisit">Plan Visit</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#profile">Profile</a>
+                <a href="#about us">About Us</a>
+               
+            </nav>
+        
+            <div class="icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-user" id="login-btn"></i>
+            </div>
+        
+            <form action="#" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="Search here...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+        </header>
+        
+
+
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="Enter your email">
+        <input type="password" class="box" placeholder="Enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">register now</a></p>
+        
+    </form>
+
+</div>
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>Take Memories Leave Footprints</h3>
+        <p>discover new places with us where adventure awaits</p>
+        <a href="#planvisit" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/vid-1.mp4.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-2.mp4.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-3.mp4.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-4.mp4.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-5.mp4.mp4"></span>
+
+    </div>
+    <div class="video-container">
+        <video src="images/vid-1.mp4.mp4" id="video-slider" loop autoplay muted></video>
+
+    </div>
+
+</section>
+
+
+<section class="planvisit" id="planvisit">
+    <h1 class="heading">
+            <span>PLAN</span>
+            <span>YOUR</span>
+            <span>VISIT</span>
+    </h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="images/plan-image.png" alt="">
+        </div>
+        <form action="">
+            <div class="inputBox">
+                <h3>Where to</h3>
+                <input type="text" placeholder="Place Name">
+            </div>
+            <div class="inputBox">
+                <h3>How many</h3>
+                <input type="number" placeholder="Number of Guests">
+            </div>
+            <div class="inputBox">
+                <h3>Arrivals</h3>
+                <input type="date">
+            </div>
+            <div class="inputBox">
+                <h3>Leaving</h3>
+                <input type="date">
+            </div>
+            <input type="submit" class="btn" value="plan now">
+        </form>
+    </div>
+</section>
+
+<section class="destinations" id="destinations">
+    <h1 class="heading">
+        <span>Destinations</span>       
+</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image-map-container">
+                <img src="images/subli-image.jpg" alt="Destination Image">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.5805132806313!2d120.49571337441816!3d18.00314928477627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338e94e209b41645%3A0x3a644e5c5b8e9b25!2sSubli%20Subli%20Beach!5e1!3m2!1sen!2sph!4v1741591514153!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Subli-subli</h3>
+                <p>Beach Resort</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">₱50 - <span>₱100</span></div>
+                <a href="#" class="btn">Plan Now</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image-map-container">
+                <img src="images/kadilian-image.jpg" alt="Destination Image">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13141.93539343093!2d120.47093935308214!3d18.008335633228928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338e9508b781c551%3A0xdb04f99e92ceb03d!2sKadilian%20Beach%20Resort!5e1!3m2!1sen!2sph!4v1741593045383!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Kadilian</h3>
+                <p>Beach Resort</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">₱200 - <span>₱800</span></div>
+                <a href="#" class="btn">Plan Now</a>
+            </div>
+            
+        </div>
+        <div class="box">
+            <div class="image-map-container">
+                <img src="images/pangil-image.jpg" alt="Destination Image">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26279.28967685718!2d120.46014336917418!3d18.039029766140306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338e9582bea95457%3A0x2e18168a245c14d7!2sPangil%2C%20Currimao%2C%20Ilocos%20Norte!5e1!3m2!1sen!2sph!4v1741593219087!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Pangil</h3>
+                <p>Beach Resort</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">₱200 - <span>₱300</span></div>
+                <a href="#" class="btn">Plan Now</a>
+                
+            </div>
+    </div>
+    <div class="box">
+        <div class="image-map-container">
+            <img src="images/Dcoral-image.jpg" alt="Destination Image">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8192705382558!2d120.4920976751789!3d17.990333083003364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338e95214a6a4bd3%3A0x47e3fc1675c2182d!2sD%20Coral%20Beach%20Resort%20Correct%20location!5e1!3m2!1sen!2sph!4v1741664092840!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Dcoral</h3>
+            <p>Beach Resort</p>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">₱150 - <span>₱500</span></div>
+            <a href="#" class="btn">Plan Now</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image-map-container">
+            <img src="images/Playa-image.jpg" alt="Destination Image">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.7015369498417!2d120.49703127517907!3d17.99665398299814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338e94e6a06df0f5%3A0x52c363c28cd4af7b!2sPlaya%20Tropical%20Resort%20Hotel!5e1!3m2!1sen!2sph!4v1741664329769!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Playa</h3>
+            <p>Beach Resort</p>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">₱200 - <span>₱800</span></div>
+            <a href="#" class="btn">Plan Now</a>
+        </div>
+        
+    </div>
+    <div class="box">
+        <div class="image-map-container">
+            <img src="images/torre-image.jpg" alt="Destination Image">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26283.58617510893!2d120.45170849215975!3d18.01024404861096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338e95005882e213%3A0xf062b3e74618f201!2sCurrimao%20Bayside!5e1!3m2!1sen!2sph!4v1741664680761!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Seawall</h3>
+            <p>Boulevard</p>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">₱200 - <span>₱300</span></div>
+            <a href="#" class="btn">Plan Now</a>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Profile Section -->
+<section class="profile" id="profile">
+    <h1 class="heading">
+        <span>Your Profile</span>
+    </h1>
+    
+    <div class="profile-container">
+        <div class="profile-sidebar">
+            <div class="user-profile">
+                <img src="https://i.pravatar.cc/150?img=12" alt="User Profile Picture">
+                <h2>John Doe</h2>
+                <p>Member since January 2025</p>
+                <div class="user-stats">
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Trips</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Reviews</span>
+                    </div>
+                </div>
+                <button class="btn edit-profile-btn">Edit Profile</button>
+            </div>
+            
+            <div class="profile-menu">
+                <ul>
+                    <li class="active" data-tab="planned-trips">My Planned Trips</li>
+                    <li data-tab="past-trips">Past Trips</li>
+                    <li data-tab="saved-destinations">Saved Destinations</li>
+                    <li data-tab="account-settings">Account Settings</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="profile-content">
+            <!-- Planned Trips Tab (Default Active) -->
+            <div class="tab-content active" id="planned-trips">
+                <h3>Your Planned Trips</h3>
+                
+                <div class="trip-cards">
+                    <!-- Trip Card 1 -->
+                    <div class="trip-card">
+                        <div class="trip-header">
+                            <img src="images/kadilian-image.jpg" alt="Destination Image">
+                            <div class="trip-status upcoming">Upcoming</div>
+                        </div>
+                        <div class="trip-details">
+                            <h4>Kadilian Beach Resort</h4>
+                            <div class="trip-info">
+                                <p><i class="fas fa-calendar-alt"></i> June 15 - June 18, 2025</p>
+                                <p><i class="fas fa-users"></i> 2 Guests</p>
+                            </div>
+                            <div class="trip-actions">
+                                <button class="btn-small edit-trip"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn-small cancel-trip"><i class="fas fa-times"></i> Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trip Card 2 -->
+                    <div class="trip-card">
+                        <div class="trip-header">
+                            <img src="images/Dcoral-image.jpg" alt="Destination Image">
+                            <div class="trip-status upcoming">Upcoming</div>
+                        </div>
+                        <div class="trip-details">
+                            <h4>D'Coral Beach Resort</h4>
+                            <div class="trip-info">
+                                <p><i class="fas fa-calendar-alt"></i> July 8 - July 10, 2025</p>
+                                <p><i class="fas fa-users"></i> 4 Guests</p>
+                            </div>
+                            <div class="trip-actions">
+                                <button class="btn-small edit-trip"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn-small cancel-trip"><i class="fas fa-times"></i> Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="no-trips-message" style="display: none;">
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <p>You don't have any upcoming trips planned.</p>
+                    <a href="#planvisit" class="btn">Plan Your First Trip</a>
+                </div>
+            </div>
+            
+            <!-- Past Trips Tab -->
+            <div class="tab-content" id="past-trips">
+                <h3>Your Past Trips</h3>
+                
+                <div class="trip-cards">
+                    <!-- Past Trip Card -->
+                    <div class="trip-card">
+                        <div class="trip-header">
+                            <img src="images/subli-image.jpg" alt="Destination Image">
+                            <div class="trip-status completed">Completed</div>
+                        </div>
+                        <div class="trip-details">
+                            <h4>Subli Beach</h4>
+                            <div class="trip-info">
+                                <p><i class="fas fa-calendar-alt"></i> February 10 - February 12, 2025</p>
+                                <p><i class="fas fa-users"></i> 3 Guests</p>
+                            </div>
+                            <div class="trip-actions">
+                                <button class="btn-small add-review"><i class="fas fa-star"></i> Add Review</button>
+                                <button class="btn-small book-again"><i class="fas fa-redo"></i> Book Again</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="no-trips-message" style="display: none;">
+                    <i class="fas fa-history"></i>
+                    <p>You don't have any past trips.</p>
+                </div>
+            </div>
+            
+            <!-- Saved Destinations Tab -->
+            <div class="tab-content" id="saved-destinations">
+                <h3>Your Saved Destinations</h3>
+                
+                <div class="saved-destinations-grid">
+                    <!-- Saved Destination Card -->
+                    <div class="saved-destination-card">
+                        <img src="images/pangil-image.jpg" alt="Destination Image">
+                        <div class="saved-destination-info">
+                            <h4>Pangil Beach</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Currimao, Ilocos Norte</p>
+                            <div class="saved-destination-actions">
+                                <a href="#" class="btn-small plan-now"><i class="fas fa-calendar-plus"></i> Plan Trip</a>
+                                <button class="btn-small remove-saved"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Saved Destination Card -->
+                    <div class="saved-destination-card">
+                        <img src="images/torre-image.jpg" alt="Destination Image">
+                        <div class="saved-destination-info">
+                            <h4>Seawall Boulevard</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Currimao, Ilocos Norte</p>
+                            <div class="saved-destination-actions">
+                                <a href="#" class="btn-small plan-now"><i class="fas fa-calendar-plus"></i> Plan Trip</a>
+                                <button class="btn-small remove-saved"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="no-saved-message" style="display: none;">
+                    <i class="fas fa-heart"></i>
+                    <p>You don't have any saved destinations yet.</p>
+                    <a href="#destinations" class="btn">Explore Destinations</a>
+                </div>
+            </div>
+            
+            <!-- Account Settings Tab -->
+            <div class="tab-content" id="account-settings">
+                <h3>Account Settings</h3>
+                
+                <form class="account-settings-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" class="box" value="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="box" value="johndoe@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="box" value="+63 912 345 6789">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" class="box" value="Manila, Philippines">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Change Password</label>
+                        <input type="password" id="password" class="box" placeholder="New Password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" class="box" placeholder="Confirm New Password">
+                    </div>
+                    
+                    <button type="submit" class="btn">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Profile Modal -->
+    <div class="edit-profile-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Edit Profile</h3>
+            
+            <form class="edit-profile-form">
+                <div class="profile-picture-upload">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Profile Picture">
+                    <label for="profile-picture" class="upload-btn">
+                        <i class="fas fa-camera"></i> Change Photo
+                    </label>
+                    <input type="file" id="profile-picture" accept="image/*" hidden>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-fullname">Full Name</label>
+                    <input type="text" id="edit-fullname" class="box" value="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-bio">Bio</label>
+                    <textarea id="edit-bio" class="box" placeholder="Tell us about yourself...">Travel enthusiast and beach lover</textarea>
+                </div>
+                
+                <button type="submit" class="btn">Save Profile</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about us">
+    <h1 class="heading">
+        <span>About Us</span>
+    </h1>
+    
+    <div class="content">
+        <div class="about-text">
+            <h3>Discover Currimao Escape</h3>
+            <p>Welcome to Currimao Escape, your gateway to the breathtaking beaches and attractions of Currimao, Ilocos Norte. We're dedicated to showcasing the natural beauty, cultural heritage, and hidden gems of this coastal paradise.</p>
+            
+            <p>Our mission is to help travelers discover the magic of Currimao's pristine beaches, historic landmarks, and local cuisine. Whether you're planning a family vacation, a romantic getaway, or an adventure with friends, we provide everything you need to create unforgettable memories.</p>
+            
+            <div class="highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h4>Pristine Beaches</h4>
+                    <p>Explore our selection of beautiful, uncrowded beaches with crystal-clear waters.</p>
+                </div>
+                
+                <div class="highlight-item">
+                    <i class="fas fa-hotel"></i>
+                    <h4>Quality Accommodations</h4>
+                    <p>From luxury resorts to cozy cottages, find the perfect place to stay.</p>
+                </div>
+                
+                <div class="highlight-item">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Local Cuisine</h4>
+                    <p>Taste authentic Ilocano dishes and fresh seafood at recommended restaurants.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-image">
+            <img src="images/plan-image.png" alt="Currimao Beach">
+        </div>
+    </div>
+    
+    <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@currimaoescape.com</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>+63 912 345 6789</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Currimao, Ilocos Norte, Philippines</p>
+            </div>
+        </div>
+        
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    
+</section>
+            <div class="footer-content">
+                <p>© 2025 Currimao Escape. All Rights Reserved.</p>
+            </div>
+        </footer>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2025 Currimao Escape. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!--connect js file -->
+<script src="js/script.js"></script>
+</body>
+</html>
